@@ -34,5 +34,3 @@ public class PruebaPersonaje{
 		System.out.println(per05.getDetalle());
 	}
 }
-
-//LOL XD
