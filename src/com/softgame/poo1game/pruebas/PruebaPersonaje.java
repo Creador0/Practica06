@@ -35,4 +35,4 @@ public class PruebaPersonaje{
 	}
 }
 
-//LOL
+//LOL XD
