@@ -2,7 +2,7 @@
 Ricardo Sánchez Méndez
 Fecha: 19/02/2021
 Hora de inicio: 08:21 a. m.
-Hora de finalizacion: 08: a. m.
+Hora de finalizacion: 08:59 a. m.
 */
 package com.softgame.poo1game.personajes;
 public class Personaje{
