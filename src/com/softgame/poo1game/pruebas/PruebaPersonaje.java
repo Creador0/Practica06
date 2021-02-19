@@ -25,8 +25,8 @@ public class PruebaPersonaje{
 		per06.setNombre("Jorge Eduardo");
 		per08.setNombre("Yosselin");
 		per10.setNombre("Ana");
-		per07.setEdad((int)Math.random()*100);
-		per09.setEdad((int)Math.random()*100);
+		per07.setEdad((int)Math.random()*1001);
+		per09.setEdad((int)Math.random()*1001);
 		System.out.println(per01.getDetalle());
 		System.out.println(per02.getDetalle());
 		System.out.println(per03.getDetalle());
