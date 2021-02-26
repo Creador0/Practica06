@@ -10,27 +10,5 @@ public class PruebaPersonaje{
 		per03.setEdad(1);
 		Personaje per04 = new Personaje("Lesly");
 		per04.setEdad(-10);
-		Personaje per05 = new Personaje("Brian");
-		per05.setEdad(500);
-		System.out.println(per01.getDetalle());
-		System.out.println(per02.getDetalle());
-		System.out.println(per03.getDetalle());
-		System.out.println(per04.getDetalle());
-		System.out.println(per05.getDetalle());
-		Personaje per06 = per05;
-		Personaje per07 = per04;
-		Personaje per08 = per03;
-		Personaje per09 = per02;
-		Personaje per10 = per01;
-		per06.setNombre("Jorge Eduardo");
-		per08.setNombre("Yosselin");
-		per10.setNombre("Ana");
-		per07.setEdad((int)(Math.random()*200));
-		per09.setEdad((int)(Math.random()*200));
-		System.out.println(per01.getDetalle());
-		System.out.println(per02.getDetalle());
-		System.out.println(per03.getDetalle());
-		System.out.println(per04.getDetalle());
-		System.out.println(per05.getDetalle());
 	}
 }
