@@ -20,7 +20,7 @@ public class Zombie extends Personaje{
 	}
 	
 	public String getDetalle(){
-		return super.getDetalle() + " " + ataque;
+		return super.toString() + " " + ataque;
 	}
 	
 	public void decVida(){
@@ -38,7 +38,7 @@ public class Zombie extends Personaje{
 			super.decVida(dec * 2);
 		}
 	}
-	public boolean equals(boolean o){
+	public boolean equals(Object o){
 		boolean inicio = false;
 		if((o != null) && o instanceof Zombie){
 			Zombie z = (Zombie) o;
