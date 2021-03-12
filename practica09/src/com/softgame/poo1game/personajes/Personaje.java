@@ -53,4 +53,15 @@ public class Personaje{
 			vida = vida - dec;
 		}
 	}
+	
+	public boolean equals(Object o){
+		boolean inicio = false;
+		if((o != null) && o instanceof Personaje){
+			Personaje p = (Personaje) o;
+			if((nombre == p.nombre) && (vida == p.vida)){
+				inicio = true;
+			}
+		}
+		return inicio;
+	}
 }
