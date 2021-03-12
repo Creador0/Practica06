@@ -1,17 +1,18 @@
-/*
-Ricardo Sánchez Méndez
-Fecha: 19/02/2021
-Hora de inicio: 08:21 a. m.
-Hora de finalizacion: 08:59 a. m.
-*/
 package com.softgame.poo1game.personajes;
 public class Personaje{
 	private String nombre;
-	private int edad;
+	private int vida;
+	
 	public Personaje(String nombre){
-		edad = 0;
+		this.vida = 3;
 		this.nombre = nombre;
 	}
+	
+	public Personaje(String nombre, int vida){
+		this.vida = vida;
+		this.nombre = nombre;
+	}
+	
 	public void setNombre(String nombre){
 		if(nombre.length() > 3 && nombre.length() < 10){
 			this.nombre = nombre;
@@ -26,18 +27,30 @@ public class Personaje{
 		System.out.println("Hola alumno de POO " + nombre);
 	}
 		
-	public int getEdad(){
-		return edad;
+	public int getVida(){
+		return vida;
 	}	
-	public boolean setEdad(int edad){
-		if(edad > 0 && edad < 120){
-			this.edad = edad;
+	public boolean setVida(int vida){
+		if(vida > 0 && vida < 100){
+			this.vida = vida;
 			return true;
 		} else {
 			return false;
 		}
 	}
 	public String getDetalle(){
-		return nombre + "\t" + edad;
+		return (nombre + "\t" + vida);
+	}
+	
+	public void decVida(){
+		if(vida != 0){
+			vida = vida - 1;
+		}
+	}
+	
+	public void decVida(int dec){
+		if((vida - dec)>0){
+			vida = vida - dec;
+		}
 	}
 }
