@@ -24,7 +24,7 @@ public class Planta extends Personaje{
 	}
 	
 	public String toString(){
-		return super.getDetalle()+" "+escudo;
+		return super.toString()+" "+escudo;
 	}
 	
 	public void decVida(){
@@ -42,9 +42,9 @@ public class Planta extends Personaje{
 			super.decVida(dec);
 		}
 	}
-	public boolean equals(boolean o){
+	public boolean equals(Object o){
 		boolean inicio = false;
-		if((o != null) && o instanceof Planta){
+		if((o != null) && (o instanceof Planta)){
 			Planta pl = (Planta) o;
 			if((nombre == pl.nombre) && (vida == pl.vida) && (escudo == pl.escudo)){
 				inicio = true;
