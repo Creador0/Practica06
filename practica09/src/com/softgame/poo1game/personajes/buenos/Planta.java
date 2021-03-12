@@ -23,7 +23,7 @@ public class Planta extends Personaje{
 		return escudo;
 	}
 	
-	public String getDetalle(){
+	public String toString(){
 		return super.getDetalle()+" "+escudo;
 	}
 	
@@ -41,5 +41,15 @@ public class Planta extends Personaje{
 		}else{
 			super.decVida(dec);
 		}
+	}
+	public boolean equals(boolean o){
+		boolean inicio = false;
+		if((o != null) && o instanceof Planta){
+			Planta pl = (Planta) o;
+			if((nombre == pl.nombre) && (vida == pl.vida) && (escudo == pl.escudo)){
+				inicio = true;
+			}
+		}
+		return inicio;
 	}
 }
