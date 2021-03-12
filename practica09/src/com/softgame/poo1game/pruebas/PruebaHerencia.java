@@ -11,8 +11,15 @@ public class PruebaHerencia{
 		
 		while(i < personajes.length()){
 			for(Personaje p: personajes){
+				if(i == p){
+					System.out.println("***" + i.toString() + "es identico a" p.toString()
+					+ "Son el mismo objeto");
+				}
 				if(i.equals(p)){
-					
+					System.out.println("**" + i.toString() + "es igual a" + p.toString()
+					+ "Son diferentes objetos");
+				}else{
+					System.out.println(i.toString() + "!=" + p.toString());
 				}
 			}
 		}
