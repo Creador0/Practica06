@@ -2,7 +2,7 @@ package com.softgame.poo1game.personajes;
 import com.softgame.poo1game.utils.Utileria;
 public class Personaje{
 	protected String nombre;
-	private int vida;
+	public int vida;
 	private static int id;
 	
 	public Personaje(String nombre){
@@ -67,7 +67,7 @@ public class Personaje{
 		}
 		return inicio;
 	}
-	private final String getIdVida(){
+	public final String getIdVida(){
 		return id + " " + vida;
 	}
 }
