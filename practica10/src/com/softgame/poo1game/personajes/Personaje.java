@@ -2,10 +2,12 @@ package com.softgame.poo1game.personajes;
 public class Personaje{
 	protected String nombre;
 	protected int vida;
+	private final int id;
 	
 	public Personaje(String nombre){
 		this.vida = 3;
 		this.nombre = nombre;
+		this.id = Utileria.getID();
 	}
 	
 	public Personaje(String nombre, int vida){
