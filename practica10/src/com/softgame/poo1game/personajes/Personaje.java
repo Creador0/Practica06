@@ -1,8 +1,8 @@
 package com.softgame.poo1game.personajes;
 public class Personaje{
 	protected String nombre;
-	protected int vida;
-	private final int id;
+	private int vida;
+	private static final int id;
 	
 	public Personaje(String nombre){
 		this.vida = 3;
@@ -41,7 +41,7 @@ public class Personaje{
 		}
 	}
 	public String toString(){
-		return (nombre + "\t" + vida);
+		return (id + " " + nombre + " " + vida);
 	}
 	
 	public void decVida(){
@@ -65,5 +65,8 @@ public class Personaje{
 			}
 		}
 		return inicio;
+	}
+	private final String getIdVida(){
+		return id + " " + vida;
 	}
 }
