@@ -7,7 +7,7 @@ public class PruebaHerencia{
 	public static void main(String args[]){
 		Personaje[] personajes = {new Personaje("Omar",99), new Planta("Karen",50),
 		new Zombie("Hanna",80,false), new Personaje("Omar",99), new Planta("Karen",50),
-		new Zombie("Hanna",80,false)};
+		new Zombie("Hanna",80,false), new Planta("Hanna",80,'A')};
 		
 		int i = 0;
 		while(i < personajes.length){
