@@ -52,4 +52,8 @@ public class Planta extends Personaje{
 		}
 		return inicio;
 	}
+	//Error: non-static method getIdVida() cannot be referenced from a static context
+	public String getIdvida(){
+		return Personaje.getIdVida() + " " + escudo;
+	}
 }
