@@ -1,8 +1,9 @@
 package com.softgame.poo1game.personajes;
+import com.softgame.poo1game.utils.Utileria;
 public class Personaje{
 	protected String nombre;
 	private int vida;
-	private static final int id;
+	private static int id;
 	
 	public Personaje(String nombre){
 		this.vida = 3;
