@@ -1,6 +1,6 @@
 package com.softgame.poo1game.personajes.buenos;
 import com.softgame.poo1game.personajes.Personaje;
-public class Planta extends Personaje{
+public abstract class Planta extends Personaje{
 	private char escudo;
 	public Planta(String nombre, int vida, char escudo){
 		super(nombre,vida);
@@ -42,7 +42,7 @@ public class Planta extends Personaje{
 		return ((super.equals(x)) && (x instanceof Planta) && (escudo==((Planta)x).escudo));
 	}
 	
-	public void setNombre(String nombre){
+	public String setNombre(String nombre){
 		if(nombre.length() >= 5 && nombre.length() <= 10){
 			this.nombre = nombre;
 	}
