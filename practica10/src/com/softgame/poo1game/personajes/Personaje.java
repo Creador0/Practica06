@@ -1,19 +1,19 @@
 package com.softgame.poo1game.personajes;
 import com.softgame.poo1game.utils.Utileria;
+import java.lang.String;
 public class Personaje{
 	protected String nombre;
-	public int vida;
-	private static int id;
-	
-	public Personaje(String nombre){
-		this.vida = 3;
-		this.nombre = nombre;
-		this.id = Utileria.getID();
-	}
+	protected int vida;
+	private final int id;
 	
 	public Personaje(String nombre, int vida){
 		this.vida = vida;
 		this.nombre = nombre;
+		id = Utileria.getID();
+	}
+	
+	public Personaje(String nombre){
+		this(nombre,3);
 	}
 	
 	public void setNombre(String nombre){
@@ -41,18 +41,17 @@ public class Personaje{
 			return false;
 		}
 	}
+	
 	public String toString(){
 		return (id + " " + nombre + " " + vida);
 	}
 	
 	public void decVida(){
-		if(vida != 0){
-			vida = vida - 1;
-		}
+		decVida(1);
 	}
 	
 	public void decVida(int dec){
-		if((vida - dec)>0){
+		if((vida - dec) >= 0){
 			vida = vida - dec;
 		}
 	}
