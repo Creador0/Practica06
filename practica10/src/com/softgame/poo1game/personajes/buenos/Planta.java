@@ -1,7 +1,7 @@
 package com.softgame.poo1game.personajes.buenos;
 import com.softgame.poo1game.personajes.Personaje;
 public class Planta extends Personaje{
-	char escudo;
+	private char escudo;
 	public Planta(String nombre, int vida, char escudo){
 		super(nombre,vida);
 		this.escudo = escudo;
@@ -28,11 +28,7 @@ public class Planta extends Personaje{
 	}
 	
 	public void decVida(){
-		if(escudo == 'A'){
-			super.decVida(2);
-		}else{
-			super.decVida();
-		}
+		decVida(1);
 	}
 	
 	public void decVida(int dec){
@@ -42,18 +38,7 @@ public class Planta extends Personaje{
 			super.decVida(dec);
 		}
 	}
-	public boolean equals(Object o){
-		boolean inicio = false;
-		if((o != null) && (o instanceof Planta)){
-			Planta pl = (Planta) o;
-			if((nombre == pl.nombre) && (vida == pl.vida) && (escudo == pl.escudo)){
-				inicio = true;
-			}
-		}
-		return inicio;
-	}
-	//Error: non-static method getIdVida() cannot be referenced from a static context
-	public String getIdvida(){
-		return Personaje.getIdVida() + " " + escudo;
+	public boolean equals(Object x){
+		return ((super.equals(x)) && (x instanceof Planta) && (escudo==((Planta)x).escudo));
 	}
 }
