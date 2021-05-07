@@ -1,8 +1,9 @@
+package com.softgame.poo1game.ventanas;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-public class VentanaPrincipal extends JFrame implements ActionListener{
-	private JFrame f:
+public class VentanaPrincipal extends JFrame{
+	private JFrame f;
 	private JLabel lblFile, lblN, lblLeidos;
 	private JTextField txtFile;
 	private JButton btnOpen, btnExit;
@@ -29,5 +30,9 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
 		f.add(btnExit);
 		f.setSize(550,440);
 		f.setVisible(true);
+	}
+	public static void main(String args[]){
+		VentanaPrincipal v = new VentanaPrincipal();
+		v.initComponents();
 	}
 }
