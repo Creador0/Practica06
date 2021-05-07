@@ -39,12 +39,19 @@ public abstract class Planta extends Personaje{
 		}
 	}
 	public boolean equals(Object x){
-		return ((super.equals(x)) && (x instanceof Planta) && (escudo==((Planta)x).escudo));
+		boolean bandera_P = false;
+		if((x!=null) && (x instanceof Planta)){
+			Planta z = (Planta) x;
+			if((nombre == z.nombre) && (vida == z.vida) && (escudo == z.escudo)){
+				bandera_P = true;
+			}
+		}
+		return bandera_P;
 	}
 	
-	public String setNombre(String nombre){
+	public void setNombre(String nombre){
 		if(nombre.length() >= 5 && nombre.length() <= 10){
 			this.nombre = nombre;
+		}
 	}
-}
 }
