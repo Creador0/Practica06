@@ -1,8 +1,17 @@
 package com.softgame.poo1game.ventanas;
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
-import java.io.*;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import javax.swing.JTextArea;
+import java.awt.FlowLayout;
+import javax.swing.JOptionPane;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.io.File;
+import java.io.IOException;
+import java.io.FileReader;
+import java.io.BufferedReader;
 public class VentanaPrincipal extends JFrame{
 	private JFrame f;
 	private JLabel lblFile, lblN, lblLeidos;
@@ -81,11 +90,10 @@ public class VentanaPrincipal extends JFrame{
 		}
 	}
 	public void getList(File f){
-		File dir = new File(f);
-		String[] contenido = dir.list();
+		String[] contenido = f.list();
 		int count = 0;
 		for(int i = 0; i<contenido.length; i++){
-			txtContenido.append(contenido[i]);
+			txtContenido.append(contenido[i]+"\n");
 			count = contenido[i].length() + count;
 			System.out.println(contenido[i]);
 		}
