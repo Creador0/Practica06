@@ -30,6 +30,7 @@ public class VentanaPrincipal extends JFrame{
 		f.add(btnExit);
 		f.setSize(550,440);
 		f.setVisible(true);
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	public static void main(String args[]){
 		VentanaPrincipal v = new VentanaPrincipal();
