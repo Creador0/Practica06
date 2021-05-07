@@ -22,6 +22,11 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
 		f.setLayout(new FlowLayout());
 		f.add(lblFile);
 		f.add(txtFile);
-		f.add
+		f.add(btnOpen);
+		f.add(txtContenido);
+		f.add(lblLeidos);
+		f.add(lblN);
+		f.add(btnExit);
+		
 	}
 }
