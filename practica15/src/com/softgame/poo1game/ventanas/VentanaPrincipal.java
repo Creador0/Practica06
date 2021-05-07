@@ -24,13 +24,20 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
 		f.add(lblFile);
 		f.add(txtFile);
 		f.add(btnOpen);
-		f.addActionPerformed(new ActionEvent e){
-			
-		}
+		f.addActionListener(new ActionEvent(){
+			public void actionPerformed(ActionEvent e){
+				openFile();
+			}
+		});
 		f.add(txtContenido);
 		f.add(lblLeidos);
 		f.add(lblN);
 		f.add(btnExit);
+			f.addActionListener(new ActionEvent(){
+			public void actionPerformed(ActionEvent e){
+				f.dispose();
+			}
+		});
 		f.setSize(550,440);
 		f.setVisible(true);
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -38,5 +45,8 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
 	public static void main(String args[]){
 		VentanaPrincipal v = new VentanaPrincipal();
 		v.initComponents();
+	}
+	public void openFile(){
+		
 	}
 }
