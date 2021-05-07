@@ -27,6 +27,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
 		f.add(lblLeidos);
 		f.add(lblN);
 		f.add(btnExit);
-		
+		f.setSize(550,440);
+		f.setVisible(true);
 	}
 }
