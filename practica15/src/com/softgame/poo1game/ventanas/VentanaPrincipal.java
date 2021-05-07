@@ -82,14 +82,12 @@ public class VentanaPrincipal extends JFrame{
 	}
 	public void getList(File f){
 		File dir = new File(f);
-		String[] archivos = dir.list();
+		String[] contenido = dir.list();
 		int count = 0;
-		int x;
-		while (x < archivos.length){
-		txtContenido.append(archivos[x]);
-		count = x;
-		x++;
-		System.out.println(archivos[x]);
+		for(int i = 0; i<contenido.length; i++){
+			txtContenido.append(contenido[i]);
+			count = contenido[i].length() + count;
+			System.out.println(contenido[i]);
 		}
 		lblN.setText(Integer.toString(count));
 	}
