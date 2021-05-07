@@ -36,4 +36,8 @@ public class VentanaPrincipal extends JFrame{
 		VentanaPrincipal v = new VentanaPrincipal();
 		v.initComponents();
 	}
+	public void openFile(){
+		String file = txtFile.getText();
+		
+	}
 }
