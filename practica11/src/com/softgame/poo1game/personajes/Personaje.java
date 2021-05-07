@@ -52,7 +52,7 @@ public abstract class Personaje{
 		}
 	}
 	
-	public abstract boolean equals(Object o);
+	public abstract boolean equals(Object x);
 	
 	public final String getIdVida(){
 		return id + " " + vida;
