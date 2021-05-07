@@ -2,7 +2,8 @@ package com.softgame.poo1game.ventanas;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-public class VentanaPrincipal extends JFrame implements ActionListener{
+import java.io.*;
+public class VentanaPrincipal extends JFrame{
 	private JFrame f;
 	private JLabel lblFile, lblN, lblLeidos;
 	private JTextField txtFile;
@@ -24,7 +25,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
 		f.add(lblFile);
 		f.add(txtFile);
 		f.add(btnOpen);
-		f.addActionListener(new ActionEvent(){
+		btnOpen.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				openFile();
 			}
@@ -33,7 +34,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
 		f.add(lblLeidos);
 		f.add(lblN);
 		f.add(btnExit);
-			f.addActionListener(new ActionEvent(){
+		btnExit.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				f.dispose();
 			}
@@ -51,7 +52,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
 		String path = System.getProperty("user.home") + System.getProperty("file.separator") + file;
 		System.out.println(path);
 		txtContenido.setText("");
-		File archivo = new file(path);
+		File archivo = new File(path);
 		if(!archivo.exists()){
 			JOptionPane.showMessageDialog(f, "No existe");
 			return;
@@ -61,5 +62,35 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
 		}else{
 			getList(archivo);
 		}
+	}
+	public void getContenido(File f){
+		try{
+			FileReader fr = new FileReader(f);
+			BufferedReader br = new BufferedReader(fr);
+			int count = 0;
+			String reng;
+			while((reng = br.readLine()) != null){
+				txtContenido.append(reng+"\n");
+				count = reng.length()+count;
+				System.out.println(reng);
+			}
+			br.close();
+			lblN.setText(Integer.toString(count));
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+	}
+	public void getList(File f){
+		File dir = new File(f);
+		String[] archivos = dir.list();
+		int count = 0;
+		int x;
+		while (x < archivos.length){
+		txtContenido.append(archivos[x]);
+		count = x;
+		x++;
+		System.out.println(archivos[x]);
+		}
+		lblN.setText(Integer.toString(count));
 	}
 }
