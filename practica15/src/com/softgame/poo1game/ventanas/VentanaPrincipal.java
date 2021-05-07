@@ -2,7 +2,7 @@ package com.softgame.poo1game.ventanas;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-public class VentanaPrincipal extends JFrame{
+public class VentanaPrincipal extends JFrame implements ActionListener{
 	private JFrame f;
 	private JLabel lblFile, lblN, lblLeidos;
 	private JTextField txtFile;
@@ -24,6 +24,9 @@ public class VentanaPrincipal extends JFrame{
 		f.add(lblFile);
 		f.add(txtFile);
 		f.add(btnOpen);
+		f.addActionPerformed(new ActionEvent e){
+			
+		}
 		f.add(txtContenido);
 		f.add(lblLeidos);
 		f.add(lblN);
@@ -35,9 +38,5 @@ public class VentanaPrincipal extends JFrame{
 	public static void main(String args[]){
 		VentanaPrincipal v = new VentanaPrincipal();
 		v.initComponents();
-	}
-	public void openFile(){
-		String file = txtFile.getText();
-		
 	}
 }
