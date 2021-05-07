@@ -47,6 +47,19 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
 		v.initComponents();
 	}
 	public void openFile(){
-		
+		String file = txtFile.getText();
+		String path = System.getProperty("user.home") + System.getProperty("file.separator") + file;
+		System.out.println(path);
+		txtContenido.setText("");
+		File archivo = new file(path);
+		if(!archivo.exists()){
+			JOptionPane.showMessageDialog(f, "No existe");
+			return;
+		}
+		if(archivo.isFile()){
+			getContenido(archivo);
+		}else{
+			getList(archivo);
+		}
 	}
 }
