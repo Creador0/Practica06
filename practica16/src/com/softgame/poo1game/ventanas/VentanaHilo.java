@@ -48,7 +48,6 @@ public class VentanaHilo extends JFrame{
 		f.add(lblC);
 		f.add(lblD);
 		f.setSize(400,600);
-		f.setVisible(true);
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	public VentanaHilo(){
