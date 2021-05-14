@@ -9,7 +9,6 @@ import java.awt.GridLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 public class VentanaHilo extends JFrame{
-	private JFrame f;
 	private JMenuBar menuBar;
 	private JLabel lblA;
 	private JLabel lblB;
@@ -20,7 +19,7 @@ public class VentanaHilo extends JFrame{
 	private JMenuItem mnuSalir;
 	
 	public void initComponents(){
-		f.setLayout(new GridLayout(4,1));
+		this.setLayout(new GridLayout(4,1));
 		lblA = new JLabel("A");
 		lblB = new JLabel("B");
 		lblC = new JLabel("C");
@@ -28,7 +27,7 @@ public class VentanaHilo extends JFrame{
 		menuBar = new JMenuBar();
 		mnuArchivo = new JMenu("Archivo");
 		menuBar.add(mnuArchivo);
-		f.setJMenuBar(menuBar);
+		this.setJMenuBar(menuBar);
 		mnuInicio = new JMenuItem("Inicio");
 		mnuInicio.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
@@ -39,16 +38,16 @@ public class VentanaHilo extends JFrame{
 		mnuSalir = new JMenuItem("Salir");
 		mnuSalir.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				f.dispose();
+				JFrame.dispose();
 			}
 		});
 		mnuArchivo.add(mnuSalir);
-		f.add(lblA);
-		f.add(lblB);
-		f.add(lblC);
-		f.add(lblD);
-		f.setSize(400,600);
-		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.add(lblA);
+		this.add(lblB);
+		this.add(lblC);
+		this.add(lblD);
+		this.setSize(400,600);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	public VentanaHilo(){
 		initComponents();
