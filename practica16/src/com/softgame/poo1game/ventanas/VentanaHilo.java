@@ -38,7 +38,7 @@ public class VentanaHilo extends JFrame{
 		mnuSalir = new JMenuItem("Salir");
 		mnuSalir.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				JFrame.dispose();
+				dispose();
 			}
 		});
 		mnuArchivo.add(mnuSalir);
@@ -50,7 +50,7 @@ public class VentanaHilo extends JFrame{
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	public VentanaHilo(){
-		initComponents();
+		initComponents(); //Si profe, perdone que no hable pero perdí el link con el celular
 	}
 	public void iniciarHilos(){
 		Thread A = new Hilo("A",lblA);
