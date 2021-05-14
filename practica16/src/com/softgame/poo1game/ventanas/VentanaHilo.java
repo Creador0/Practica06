@@ -26,9 +26,9 @@ public class VentanaHilo extends JFrame{
 		lblC = new JLabel("C");
 		lblD = new JLabel("D");
 		menuBar = new JMenuBar();
-		f.setJMenuBar(menuBar);
 		mnuArchivo = new JMenu("Archivo");
 		menuBar.add(mnuArchivo);
+		f.setJMenuBar(menuBar);
 		mnuInicio = new JMenuItem("Inicio");
 		mnuInicio.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
@@ -48,6 +48,7 @@ public class VentanaHilo extends JFrame{
 		f.add(lblC);
 		f.add(lblD);
 		f.setSize(400,600);
+		f.setVisible(true);
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	public VentanaHilo(){
