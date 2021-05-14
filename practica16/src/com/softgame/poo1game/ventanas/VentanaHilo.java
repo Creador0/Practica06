@@ -54,13 +54,13 @@ public class VentanaHilo extends JFrame{
 		initComponents();
 	}
 	public void iniciarHilos(){
-		Thread tA = new Hilo("A",lblA);
-		tA.start();
-		Thread tB = new Hilo("B",lblB);
-		tB.start();
-		Thread tC = new Hilo("C",lblC);
-		tC.start();
-		Thread tD = new Hilo("D",lblD);
-		tD.start();
+		Thread A = new Hilo("A",lblA);
+		A.start();
+		Thread B = new Hilo("B",lblB);
+		B.start();
+		Thread C = new Hilo("C",lblC);
+		C.start();
+		Thread D = new Hilo("D",lblD);
+		D.start();
 	}
 }
