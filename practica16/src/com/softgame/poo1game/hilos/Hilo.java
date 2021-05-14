@@ -23,7 +23,7 @@ public class Hilo extends Thread{
 				e.printStackTrace();
 			}
 		}
-		str += "HECHO";
+		str += " HECHO";
 		etiqueta.setText(str);
 	}
 }
