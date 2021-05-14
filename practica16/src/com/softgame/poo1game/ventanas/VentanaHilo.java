@@ -1,8 +1,13 @@
+package com.softgame.poo1game.ventanas;
+import com.softgame.poo1game.hilos.Hilo;
 import javax.swing.JMenuBar;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JFrame;
+import java.awt.GridLayout;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 public class VentanaHilo extends JFrame{
 	private JFrame f;
 	private JMenuBar menuBar;
@@ -44,5 +49,18 @@ public class VentanaHilo extends JFrame{
 		f.add(lblD);
 		f.setSize(400,600);
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	public VentanaHilo(){
+		initComponents();
+	}
+	public void iniciarHilos(){
+		Thread tA = new Hilo("A",lblA);
+		tA.start();
+		Thread tB = new Hilo("B",lblB);
+		tB.start();
+		Thread tC = new Hilo("C",lblC);
+		tC.start();
+		Thread tD = new Hilo("D",lblD);
+		tD.start();
 	}
 }
