@@ -43,8 +43,8 @@ public class Acciones extends Ventana{
 		if(getTxtLados().getText() == ""){
 			return;
 		} else {
-			if(getTxtLados().validar() == true){
-				lados = (int) (getTxtLados().getText());
+			if(validar(getTxtLados().getText()) == true){
+				lados = (Integer) (getTxtLados().getText());
 				getBtnAdd().setEnabled(true);
 			} else {
 				JOptionPane.showMessageDialog(v, "Valores incorrectos");
@@ -107,7 +107,7 @@ public class Acciones extends Ventana{
         // NO MODIFICAR EL SIGIENTE CÓDIGO
         //Solo podrá cambiar la variable (file) <- ruta del archivo
         try{
-            FileWriter fr = new FileWriter(user.home.documents); //<- (file) ruta del archivo 
+            FileWriter fr = new FileWriter(home.documents); //<- (file) ruta del archivo 
             BufferedWriter bw = new BufferedWriter(fr);
             bw.write(getTxtFiguras().getText());
             bw.close();
