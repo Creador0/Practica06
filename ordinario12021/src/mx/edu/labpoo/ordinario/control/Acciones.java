@@ -4,8 +4,8 @@ import javax.swing.JOptionPane;
 import java.util.TreeSet;
 import mx.edu.labpoo.ordinario.figuras.Figura;
 import mx.edu.labpoo.ordinario.vistas.Ventana;
-import mx.edu.labpoo.ordinario.figuras.Rectangulo;
 import mx.edu.labpoo.ordinario.figuras.Triangulo;
+import mx.edu.labpoo.ordinario.figuras.Rectangulo;
 public class Acciones extends Ventana{
 
     private Ventana v;
@@ -46,7 +46,7 @@ public class Acciones extends Ventana{
 			return;
 		} else {
 			if(validar(getTxtLados().getText()) == true){
-				lados = (Integer) (getTxtLados().getText());
+				lados = Integer.parseInt(getTxtLados().getText());
 				getBtnAdd().setEnabled(true);
 			} else {
 				JOptionPane.showMessageDialog(v, "Valores incorrectos");
@@ -109,7 +109,7 @@ public class Acciones extends Ventana{
         // NO MODIFICAR EL SIGIENTE CÓDIGO
         //Solo podrá cambiar la variable (file) <- ruta del archivo
         try{
-            FileWriter fr = new FileWriter(home.documents); //<- (file) ruta del archivo 
+            FileWriter fr = new FileWriter("user.home.documents"); //<- (file) ruta del archivo 
             BufferedWriter bw = new BufferedWriter(fr);
             bw.write(getTxtFiguras().getText());
             bw.close();
