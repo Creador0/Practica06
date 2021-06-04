@@ -50,7 +50,7 @@ public class VentanaHilo extends JFrame{
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	public VentanaHilo(){
-		initComponents(); //Si profe, perdone que no hable pero perdí el link con el celular
+		initComponents();
 	}
 	public void iniciarHilos(){
 		Thread A = new Hilo("A",lblA);
