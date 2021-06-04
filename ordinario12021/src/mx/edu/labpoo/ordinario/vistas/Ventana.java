@@ -1,4 +1,13 @@
 package mx.edu.labpoo.ordinario.vistas;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import javax.swing.JTextArea;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import mx.edu.labpoo.ordinario.control.Acciones;
+import mx.edu.labpoo.ordinario.figuras.Figura;
 public class Ventana extends JFrame{ //hereda de JFrame (A)
     Acciones acc;
     
