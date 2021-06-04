@@ -1,13 +1,14 @@
 package mx.edu.labpoo.ordinario.control;
 import java.io.*;
+import javax.swing.JOptionPane;
 import java.util.TreeSet;
 import mx.edu.labpoo.ordinario.figuras.Figura;
 import mx.edu.labpoo.ordinario.vistas.Ventana;
-public class Acciones {
+public class Acciones extends Ventana{
 
     private Ventana v;
     //(1)Atributo privado de tipo TreeSet (lista) que almacena objetos de tipo Figura
-	private TreeSet<Figura> ts = new TreeSet<Figura>();
+	private TreeSet<Figura> lista = new TreeSet<Figura>();
     //(2)Atributo privado y entero (lados)
 	private int lados;
 
@@ -40,13 +41,13 @@ public class Acciones {
         //Si el contenido de txtLados (texto) es una cadena vacia ("")
         //terminar el método con la palabre return;
 		if(getTxtLados().getText() == ""){
-			return "";
+			return;
 		} else {
-			if(getTxtLados().validad() == true){
-				lados = (int) (txtLados.getText());
+			if(getTxtLados().validar() == true){
+				lados = (int) (getTxtLados().getText());
 				getBtnAdd().setEnabled(true);
 			} else {
-				showMessageDialog(v, "Valores incorrectos");
+				JOptionPane.showMessageDialog(v, "Valores incorrectos");
 			}
 		}
 
@@ -65,7 +66,7 @@ public class Acciones {
         boolean l3 = validar(getTxtLad3().getText(), 1, 100);
         boolean l4 = validar(getTxtLad4().getText(), 1, 100);
         //crear la figura
-        Figura f = new Figura();
+        Figura f;
         if (lados == 3 && l1 && l2 && l3 && l4) {
             int a1 = Integer.parseInt(getTxtLad1().getText());
             int a2 = Integer.parseInt(getTxtLad2().getText());
