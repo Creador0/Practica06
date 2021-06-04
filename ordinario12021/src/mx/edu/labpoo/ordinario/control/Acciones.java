@@ -1,9 +1,13 @@
+package mx.edu.labpoo.ordinario.control;
+import java.io.*;
 import java.util.TreeSet;
+import mx.edu.labpoo.ordinario.figuras.Figura;
+import mx.edu.labpoo.ordinario.vistas.Ventana;
 public class Acciones {
 
     private Ventana v;
     //(1)Atributo privado de tipo TreeSet (lista) que almacena objetos de tipo Figura
-	private Set<Figura> lista = new TreeSet<Figura>();
+	private TreeSet<Figura> ts = new TreeSet<Figura>();
     //(2)Atributo privado y entero (lados)
 	private int lados;
 
@@ -61,7 +65,7 @@ public class Acciones {
         boolean l3 = validar(getTxtLad3().getText(), 1, 100);
         boolean l4 = validar(getTxtLad4().getText(), 1, 100);
         //crear la figura
-        Figura f = null;
+        Figura f = new Figura();
         if (lados == 3 && l1 && l2 && l3 && l4) {
             int a1 = Integer.parseInt(getTxtLad1().getText());
             int a2 = Integer.parseInt(getTxtLad2().getText());
@@ -70,8 +74,8 @@ public class Acciones {
             f = new Triangulo(a1, a2, a3, a4);
         }
         if (lados == 4 && l1 && l2) {
-            int a1 = Integer.parseInt(/* texto de txtLad1 */);
-            int a2 = Integer.parseInt(/* texto de txtLad2 */);
+            int a1 = Integer.parseInt(getTxtLad1().getText());
+            int a2 = Integer.parseInt(getTxtLad2().getText());
             f = new Rectangulo(a1, a2);
         }
         if (f != null) {
@@ -82,11 +86,13 @@ public class Acciones {
     }
 
     private void showLista() {
-        //Limpiar el contenido de txtFiguras
+        getTxtFiguras().setText("");
         if (lista.size() > 0) {
             for (Figura figura : lista) {
                 //agregar el toString de figura a txtFiguras
+				getTxtFiguras().append(f.toString());
                 //agregar un salto de linea a txtFiguras
+				getTxtFiguras().append("\n");
             }
         }
     }
@@ -100,9 +106,9 @@ public class Acciones {
         // NO MODIFICAR EL SIGIENTE CÓDIGO
         //Solo podrá cambiar la variable (file) <- ruta del archivo
         try{
-            FileWriter fr = new FileWriter(file); //<- (file) ruta del archivo 
+            FileWriter fr = new FileWriter(user.home.documents); //<- (file) ruta del archivo 
             BufferedWriter bw = new BufferedWriter(fr);
-            bw.write(/*texto de txtFiguras */);
+            bw.write(getTxtFiguras().getText());
             bw.close();
         }catch (IOException ioe){
             System.out.println(ioe);
