@@ -45,7 +45,7 @@ public class Acciones extends Ventana{
 		if(getTxtLados().getText() == ""){
 			return;
 		} else {
-			if(validar(getTxtLados().getText()) == true){
+			if(validar(getTxtLados().getText(), 3, 4) == true){
 				lados = Integer.parseInt(getTxtLados().getText());
 				getBtnAdd().setEnabled(true);
 			} else {
