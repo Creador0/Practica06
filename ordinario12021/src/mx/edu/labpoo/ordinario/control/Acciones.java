@@ -4,6 +4,8 @@ import javax.swing.JOptionPane;
 import java.util.TreeSet;
 import mx.edu.labpoo.ordinario.figuras.Figura;
 import mx.edu.labpoo.ordinario.vistas.Ventana;
+import mx.edu.labpoo.ordinario.figuras.Rectangulo;
+import mx.edu.labpoo.ordinario.figuras.Triangulo;
 public class Acciones extends Ventana{
 
     private Ventana v;
